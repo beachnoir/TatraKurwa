@@ -1,0 +1,8 @@
+Datum,Etappe,Activiteit,Afstand_km,Stijging_m,Tijd_schatting,Overnachting,Link,Status
+2026-06-06,Aankomst,"Vlucht CRL -> KRK (07:25), transfer naar Zakopane",,,,"Willa Labelle, Zakopane",https://www.booking.com/hotel/pl/labelle.html,Vastgelegd
+2026-06-07,Dag 1,"Minibus naar Kiry, hike Kościeliska Valley -> Hala Ornak",5.6,267,01:34,"Hala Ornak",http://schronisko-ornak.pl/,Vastgelegd
+2026-06-08,Dag 2,"Hala Ornak -> Czerwone Wierchy -> Hala Kondratowa",12,1300,06:30,"Hala Kondratowa",https://schroniskokondratowa.pl/,Vastgelegd
+2026-06-09,Dag 3,"Hala Kondratowa -> Kasprowy Wierch -> Murowaniec",8.6,877,05:00,"Murowaniec",https://murowaniec.com/,Vastgelegd
+2026-06-10,Dag 4,"Murowaniec -> Zawrat -> Dolina Pieciu Stawow",8,781,04:30,"Five Lakes hut",http://piecstawow.pl/en/home-2/,Te bevestigen
+2026-06-10,Exit,"Optionele afdaling naar Palenica Bialczanska + transfer Zakopane",8.5,0,03:00,"Willa Labelle, Zakopane",https://www.booking.com/hotel/pl/labelle.html,Vastgelegd
+2026-06-11,Terugreis,"Transfer Zakopane -> KRK, vlucht KRK -> CRL (15:45)",,,, , ,Vastgelegd

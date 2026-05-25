@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="GitHub Copilot">
+  <metadata>
+    <name>Tatra Day 4 - Murowaniec to Zakopane Exit</name>
+    <desc>Day 4 Option A per trip notes: Murowaniec -&gt; Zawrat -&gt; Dolina Pieciu Stawow -&gt; long descent to Palenica/Wodogrzmoty transfer exit.</desc>
+  </metadata>
+  <wpt lat="49.243273" lon="20.006932"><name>Murowaniec Hut</name></wpt>
+  <wpt lat="49.232708" lon="20.014626"><name>Czarny Staw Gasienicowy</name></wpt>
+  <wpt lat="49.219088" lon="20.016392"><name>Zawrat Pass</name></wpt>
+  <wpt lat="49.213583" lon="20.048490"><name>Five Lakes Valley Hut</name></wpt>
+  <wpt lat="49.221800" lon="20.058200"><name>Descent section</name></wpt>
+  <wpt lat="49.229400" lon="20.073800"><name>Descent section</name></wpt>
+  <wpt lat="49.233972" lon="20.087790"><name>Wodogrzmoty Mickiewicza</name></wpt>
+  <wpt lat="49.2563575" lon="20.1034202"><name>Palenica Bialczanska</name></wpt>
+  <rte>
+    <name>Day 4 Option A: Murowaniec -&gt; Zawrat -&gt; Palenica</name>
+    <rtept lat="49.243273" lon="20.006932"><name>Murowaniec</name></rtept>
+    <rtept lat="49.232708" lon="20.014626"><name>Czarny Staw</name></rtept>
+    <rtept lat="49.219088" lon="20.016392"><name>Zawrat</name></rtept>
+    <rtept lat="49.213583" lon="20.048490"><name>Five Lakes Valley</name></rtept>
+    <rtept lat="49.221800" lon="20.058200"><name>Descent section</name></rtept>
+    <rtept lat="49.229400" lon="20.073800"><name>Descent section</name></rtept>
+    <rtept lat="49.233972" lon="20.087790"><name>Wodogrzmoty Mickiewicza</name></rtept>
+    <rtept lat="49.2563575" lon="20.1034202"><name>Palenica Bialczanska</name></rtept>
+  </rte>
+  <trk>
+    <name>Day 4 Track</name>
+    <trkseg><trkpt lat="49.2432730" lon="20.0069320" /><trkpt lat="49.2327080" lon="20.0146260" /><trkpt lat="49.2190880" lon="20.0163920" /><trkpt lat="49.2135830" lon="20.0484900" /><trkpt lat="49.2218000" lon="20.0582000" /><trkpt lat="49.2294000" lon="20.0738000" /><trkpt lat="49.2339720" lon="20.0877900" /><trkpt lat="49.2563575" lon="20.1034202" /></trkseg></trk>
+</gpx>

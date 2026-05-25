@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="GitHub Copilot">
+  <metadata>
+    <name>Tatra Day 3 - Kondratowa to Murowaniec</name>
+    <desc>Day 3 per trip notes: GREEN from Kondratowa to Przelecz pod Kopa Kondracka, RED to Kasprowy Wierch, then YELLOW to Murowaniec.</desc>
+  </metadata>
+  <wpt lat="49.249647" lon="19.951727"><name>Hala Kondratowa Hut</name></wpt>
+  <wpt lat="49.245100" lon="19.946200"><name>Green trail section</name></wpt>
+  <wpt lat="49.240300" lon="19.942300"><name>Green trail section</name></wpt>
+  <wpt lat="49.234471" lon="19.938800"><name>Przelecz pod Kopa Kondracka</name></wpt>
+  <wpt lat="49.234800" lon="19.947800"><name>Red trail section</name></wpt>
+  <wpt lat="49.233700" lon="19.958900"><name>Red trail section</name></wpt>
+  <wpt lat="49.232800" lon="19.969500"><name>Red trail section</name></wpt>
+  <wpt lat="49.231801" lon="19.981561"><name>Kasprowy Wierch</name></wpt>
+  <wpt lat="49.236100" lon="19.988700"><name>Yellow trail section</name></wpt>
+  <wpt lat="49.240200" lon="19.995800"><name>Yellow trail section</name></wpt>
+  <wpt lat="49.243273" lon="20.006932"><name>Murowaniec Hut</name></wpt>
+  <rte>
+    <name>Day 3: Kondratowa -&gt; Kasprowy -&gt; Murowaniec</name>
+    <rtept lat="49.249647" lon="19.951727"><name>Hala Kondratowa</name></rtept>
+    <rtept lat="49.245100" lon="19.946200"><name>Green trail section</name></rtept>
+    <rtept lat="49.240300" lon="19.942300"><name>Green trail section</name></rtept>
+    <rtept lat="49.234471" lon="19.938800"><name>Przelecz pod Kopa Kondracka</name></rtept>
+    <rtept lat="49.234800" lon="19.947800"><name>Red trail section</name></rtept>
+    <rtept lat="49.233700" lon="19.958900"><name>Red trail section</name></rtept>
+    <rtept lat="49.232800" lon="19.969500"><name>Red trail section</name></rtept>
+    <rtept lat="49.231801" lon="19.981561"><name>Kasprowy Wierch</name></rtept>
+    <rtept lat="49.236100" lon="19.988700"><name>Yellow trail section</name></rtept>
+    <rtept lat="49.240200" lon="19.995800"><name>Yellow trail section</name></rtept>
+    <rtept lat="49.243273" lon="20.006932"><name>Murowaniec</name></rtept>
+  </rte>
+  <trk>
+    <name>Day 3 Track</name>
+    <trkseg><trkpt lat="49.2496470" lon="19.9517270" /><trkpt lat="49.2451000" lon="19.9462000" /><trkpt lat="49.2403000" lon="19.9423000" /><trkpt lat="49.2344710" lon="19.9388000" /><trkpt lat="49.2348000" lon="19.9478000" /><trkpt lat="49.2337000" lon="19.9589000" /><trkpt lat="49.2328000" lon="19.9695000" /><trkpt lat="49.2318010" lon="19.9815610" /><trkpt lat="49.2361000" lon="19.9887000" /><trkpt lat="49.2402000" lon="19.9958000" /><trkpt lat="49.2432730" lon="20.0069320" /></trkseg></trk>
+</gpx>

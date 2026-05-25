@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="nl-BE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tatra, Kurwa! - Inpaklijst</title>
+    <meta
+      name="description"
+      content="Algemene, aanpasbare inpaklijst voor Tatra, Kurwa!."
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="eyebrow">Handig voor iedereen in de groep</p>
+        <h1>Tatra, Kurwa! Inpaklijst</h1>
+        <p class="subtitle">
+          Voeg je eigen items toe, vink af per persoon en reset wanneer nodig.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="index.html">Terug naar trip hub</a>
+          <a class="button button-ghost" href="#custom">Naar lijst</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel" id="custom">
+        <h2>Jouw aanpasbare lijst</h2>
+        <p>
+          Kies eerst een persoon. Elke persoon heeft een eigen lijst die lokaal in de browser bewaard blijft.
+        </p>
+
+        <div class="slogan" aria-label="Groepsslogan">
+          <p>Tout seul, on va toujours plus vite</p>
+          <p>Mais ensemble, on va beaucoup plus loin.</p>
+        </div>
+
+        <div class="character-showcase" id="characterShowcase" aria-live="polite">
+          <div class="avatar-frame" id="activeAvatar" aria-hidden="true"></div>
+          <div>
+            <p class="muted-line">Actief personage</p>
+            <h3 id="activePersonName"></h3>
+            <p id="activePersonRole" class="role-line"></p>
+            <p id="activePersonFlavor" class="flavor-line"></p>
+          </div>
+        </div>
+
+        <div class="person-switcher" id="personSwitcher" aria-label="Kies persoon"></div>
+        <p class="muted-line">Actieve lijst: <strong id="activePersonLabel"></strong></p>
+        <p class="muted-line">Opslag: <strong>Lokaal in je browser</strong></p>
+
+        <div class="panel-head">
+          <button id="exportLists" class="button" type="button">Exporteer lijsten (JSON)</button>
+          <label class="button button-ghost" for="importListsFile">Importeer lijsten</label>
+          <input id="importListsFile" type="file" accept="application/json" class="visually-hidden" />
+        </div>
+
+        <form id="addItemForm" class="panel-head" aria-label="Nieuw item toevoegen">
+          <label for="newItem" class="visually-hidden">Nieuw item</label>
+          <input
+            id="newItem"
+            name="newItem"
+            type="text"
+            placeholder="Bijv. Regenbroek, sporttape, extra batterijen..."
+            maxlength="120"
+            required
+          />
+          <button class="button" type="submit">Toevoegen</button>
+          <button id="resetAll" class="button button-small" type="button">Alles resetten</button>
+        </form>
+
+        <div id="packingList" class="checklist"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Party roster</h2>
+        <p class="muted-line">Zelda x Final Fantasy energie, met nul schaamte en maximale berg-chaos.</p>
+        <div class="roster-grid" id="rosterGrid"></div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>
+        Inpaklijst lokaal opgeslagen in je browser op dit toestel.
+      </p>
+    </footer>
+
+    <script src="assets/js/packing.js"></script>
+  </body>
+</html>

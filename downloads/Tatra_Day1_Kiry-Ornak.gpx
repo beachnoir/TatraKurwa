@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="GitHub Copilot">
+  <metadata>
+    <name>Tatra Day 1 - Kiry to Hala Ornak</name>
+    <desc>Day 1 hike segment for Tatra, Kurwa! itinerary.</desc>
+  </metadata>
+  <wpt lat="49.275474" lon="19.868932"><name>Kiry Trailhead</name></wpt>
+  <wpt lat="49.228942" lon="19.858810"><name>Hala Ornak Hut</name></wpt>
+  <rte>
+    <name>Day 1: Kiry to Hala Ornak</name>
+    <rtept lat="49.275474" lon="19.868932"><name>Kiry</name></rtept>
+    <rtept lat="49.228942" lon="19.858810"><name>Hala Ornak</name></rtept>
+  </rte>
+  <trk>
+    <name>Day 1 Track</name>
+    <trkseg><trkpt lat="49.2754740" lon="19.8689320" /><trkpt lat="49.2289420" lon="19.8588100" /></trkseg></trk>
+</gpx>

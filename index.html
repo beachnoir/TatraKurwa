@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="nl-BE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tatra, Kurwa! - Juni 2026</title>
+    <meta
+      name="description"
+      content="Interactieve reisplanning voor Tatra, Kurwa! (juni 2026) met dagplanning, veiligheid, downloads en praktische links."
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="eyebrow">Tatra, Kurwa! · 5 personen · Juni 2026</p>
+        <h1>Tatra, Kurwa!</h1>
+        <p class="subtitle">
+          Alles op een plek: dagplanning, praktische info, veiligheidslinks en directe downloads.
+        </p>
+        <div class="slogan hero-slogan" aria-label="Groepsslogan">
+          <p>Tout seul, on va toujours plus vite</p>
+          <p>Mais ensemble, on va beaucoup plus loin.</p>
+        </div>
+        <nav class="tabs-nav hero-tabs" aria-label="Trip tabs">
+          <button class="tab-button active" type="button" data-tab="hike">Hike</button>
+          <button class="tab-button" type="button" data-tab="schedule">Schedule</button>
+          <button class="tab-button" type="button" data-tab="packing">Packing</button>
+          <button class="tab-button" type="button" data-tab="links">Links</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" id="trip-tabs">
+      <section class="panel" id="party-spotlight">
+        <h2>Party roster</h2>
+        <p class="muted-line">Hyrule-vibes, bergschoenen aan: jullie classes, rollen en inside-joke memes.</p>
+        <div class="roster-grid" id="mainRoster"></div>
+      </section>
+
+      <section class="panel tab-panel is-active" id="tab-hike" data-tab-panel="hike">
+        <h2>Hike - haalbaarheid en dag-per-dag kaart</h2>
+        <p>
+          Op basis van route-inschattingen, hutlocaties en actuele TPN waarschuwingen is dit schema
+          haalbaar voor een fitte groep, met <strong>Dag 2</strong> en vooral <strong>Dag 4</strong> als zwaarste dagen.
+          Dag 4 bevat kettingterrein (Zawrat) en daarna een lange afdaling.
+        </p>
+        <div class="hike-layout">
+          <aside>
+            <div class="hike-day-buttons" id="hikeDayButtons"></div>
+            <article class="hike-day-info" id="hikeDayInfo"></article>
+          </aside>
+          <div class="hike-map-wrap">
+            <div id="hikeMap" aria-label="Interactieve hike map"></div>
+          </div>
+        </div>
+        <h3>GPX downloads</h3>
+        <div class="download-grid">
+          <a class="download-card" href="downloads/Tatra_Hut_to_Hut_2026.gpx" download>
+            <h3>Volledige GPX route</h3>
+            <p>Alle dagen gecombineerd</p>
+          </a>
+          <a class="download-card" href="downloads/Tatra_Day1_Kiry-Ornak.gpx" download>
+            <h3>Dag 1 GPX</h3>
+            <p>Kiry -> Hala Ornak</p>
+          </a>
+          <a class="download-card" href="downloads/Tatra_Day2_Ornak-Kondratowa.gpx" download>
+            <h3>Dag 2 GPX</h3>
+            <p>Ornak -> Kondratowa (Czerwone Wierchy)</p>
+          </a>
+          <a class="download-card" href="downloads/Tatra_Day3_Kondratowa-Murowaniec.gpx" download>
+            <h3>Dag 3 GPX</h3>
+            <p>Kondratowa -> Murowaniec</p>
+          </a>
+          <a class="download-card" href="downloads/Tatra_Day4_Murowaniec-Zawrat-Zakopane-Exit.gpx" download>
+            <h3>Dag 4 GPX</h3>
+            <p>Murowaniec -> Zawrat -> exit richting transfer</p>
+          </a>
+          <a class="download-card" href="downloads/Tatra_Day4B_Murowaniec-Kuznice.gpx" download>
+            <h3>Dag 4 Plan B GPX</h3>
+            <p>Murowaniec -> Kuznice (snelle afdaling)</p>
+          </a>
+        </div>
+        <p class="muted-line">
+          iPhone: deze GPX-bestanden zijn getest als GPX 1.1 tracks en laden in apps zoals Organic Maps,
+          OsmAnd en Komoot. Gebruik ze als routegids op de kaart, maar controleer altijd trailmarkeringen
+          en het actuele TPN-bericht voor je vertrekt.
+        </p>
+        <h3>Offline iPhone navigatie-check (voor vertrek)</h3>
+        <p class="muted-line">
+          Vink deze punten af op elke telefoon. Deze lijst wordt lokaal opgeslagen in je browser.
+        </p>
+        <div id="offlineChecklist" class="checklist"></div>
+        <button id="resetOfflineChecklist" class="button button-small" type="button">
+          Offline checklist resetten
+        </button>
+      </section>
+
+      <section class="panel tab-panel" id="tab-schedule" data-tab-panel="schedule">
+        <div class="panel-head">
+          <h2>Dagplanning</h2>
+          <label for="dayFilter">Filter:</label>
+          <select id="dayFilter">
+            <option value="all">Alles</option>
+            <option value="travel">Reis</option>
+            <option value="hike">Hike</option>
+            <option value="sleep">Overnachting</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table class="planning-table">
+            <thead>
+              <tr>
+                <th>Datum</th>
+                <th>Type</th>
+                <th>Activiteit</th>
+                <th>Start</th>
+                <th>Einde</th>
+                <th>Duur</th>
+                <th>Afstand</th>
+                <th>Stijging</th>
+                <th>Overnachting</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="planningBody"></tbody>
+          </table>
+        </div>
+        <div class="two-col">
+          <article>
+            <h3>Belangrijk voor uitvoerbaarheid</h3>
+            <ul>
+              <li>Controleer elke ochtend het officiële trail bulletin van TPN.</li>
+              <li>Zawrat bevat kettingpassages en kost tijd bij drukte of natte rots.</li>
+              <li>Dag 4 is lang: vroeg vertrekken en duidelijke turn-around tijd afspreken.</li>
+              <li>Neem cash mee: kaartbetalingen in hutten kunnen uitvallen.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Transport reminder</h3>
+            <p>
+              Voor 6 juni is de <strong>13:45 FlixBus</strong> doorgaans de veiligere optie na bagage-afhaling.
+              Voor 11 juni best een marge houden voor FR5533.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel tab-panel" id="tab-packing" data-tab-panel="packing">
+        <h2>Packing</h2>
+        <p>
+          De volledige, persoonlijke checklist-tool staat op een aparte pagina met opslag per persoon.
+          Hieronder staat de groeps-checklist voor vertrek.
+        </p>
+        <p>
+          <a class="button" href="packing.html">Open aanpasbare inpaklijst</a>
+        </p>
+        <div id="checklist" class="checklist"></div>
+        <button id="resetChecklist" class="button button-small" type="button">Checklist resetten</button>
+      </section>
+
+      <section class="panel tab-panel" id="tab-links" data-tab-panel="links">
+        <h2>Links</h2>
+        <p>Alle nuttige externe links voor park, transfer en overnachtingen.</p>
+
+        <h3>Route-validatie bronnen</h3>
+        <div class="link-grid">
+          <a href="https://www.zakopane.pl/strefa-turystyczna/turystyka/wycieczki-gorskie-latem/szlaki-lato/czerwone-wierchy/" target="_blank" rel="noopener noreferrer">Zakopane: Czerwone Wierchy (afstand/tijd context)</a>
+          <a href="https://mapa-turystyczna.pl/route/eemv" target="_blank" rel="noopener noreferrer">Mapa Turystyczna: Murowaniec ↔ Palenica via Zawrat (17.1 km)</a>
+          <a href="https://szlaki.app/trasa/szlak-z-hali-kondratowej-na-kasprowy-wierch" target="_blank" rel="noopener noreferrer">Szlaki.app: Kondratowa -> Kasprowy (tijd/hoogte context)</a>
+          <a href="https://mynaszlaku.pl/szlak-na-zawrat-i-krzyzne/" target="_blank" rel="noopener noreferrer">MyNaSzlaku: Zawrat-route praktijkvoorbeeld</a>
+        </div>
+
+        <h3>Groepsbestanden</h3>
+        <div class="download-grid">
+          <a class="download-card" href="downloads/Tatra_Reisplan_2026_nl-BE.csv" download>
+            <h3>Reisplan NL (CSV)</h3>
+            <p>Voor delen in sheets of excel</p>
+          </a>
+          <a class="download-card" href="downloads/Trip-Pack-Tatra-2026-nl-BE.md" download>
+            <h3>Trip Pack NL (Markdown)</h3>
+            <p>Korte briefing voor de groep</p>
+          </a>
+        </div>
+
+        <h3>Officiële TPN links en kaart (PDF)</h3>
+        <p>
+          Dit zijn officiële bronnen van Tatrzanski Park Narodowy (TPN), inclusief de officiële
+          PDF-kaart van de wandelpaden.
+        </p>
+        <div class="download-grid">
+          <a
+            class="download-card"
+            href="https://tpn.gov.pl/tatra-national-park"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>TPN officiële info (Engels)</h3>
+            <p>tpn.gov.pl/tatra-national-park</p>
+          </a>
+          <a
+            class="download-card"
+            href="https://tpn.gov.pl/komunikat-turystyczny"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Dagelijks trail bulletin</h3>
+            <p>tpn.gov.pl/komunikat-turystyczny</p>
+          </a>
+          <a
+            class="download-card"
+            href="https://tpn.gov.pl/pliki-do-pobrania/pobierz/8ec9f3c0-6fa3-44bc-a2ee-3b8f60ed1df8.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Official trail map (EN) - PDF</h3>
+            <p>Map of the trails in Tatra National Park (7.41 MB)</p>
+          </a>
+          <a
+            class="download-card"
+            href="https://tpn.gov.pl/pliki-do-pobrania/pobierz/b099bc98-b1d3-47a9-a12a-0d2d0250bf87.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Schema szlakow TPN - awers (PDF)</h3>
+            <p>Officiële kaart voorkant (7.41 MB)</p>
+          </a>
+          <a
+            class="download-card"
+            href="https://tpn.gov.pl/pliki-do-pobrania/pobierz/6507a000-619c-4315-bd67-b6ddfab56a0e.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Schema szlakow TPN - rewers (PDF)</h3>
+            <p>Officiële kaart achterkant (3.65 MB)</p>
+          </a>
+          <a
+            class="download-card"
+            href="https://tpn.gov.pl/geoportal"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>TPN Geoportal</h3>
+            <p>Officiële interactieve kaartomgeving</p>
+          </a>
+        </div>
+
+        <h3>Transfer KRK Airport -> Zakopane</h3>
+        <p>
+          FlixBus lijkt de beste directe optie voor jullie datum. Hieronder staan de directe boekingslink
+          en nuttige fallback links.
+        </p>
+        <div class="download-grid">
+          <a
+            class="download-card"
+            href="https://shop.flixbus.be/search?departureCity=12fb32b4-db51-4e59-9cae-7dc9d629934b&arrivalCity=40e27ae3-8646-11e6-9066-549f350fcb0c&route=Krak%C3%B3w+Airport-Zakopane&rideDate=06.06.2026&adult=5&_locale=nl_BE&departureCountryCode=PL&arrivalCountryCode=PL&features%5Bfeature.enable_distribusion%5D=1&features%5Bfeature.train_cities_only%5D=0&features%5Bfeature.station_search%5D=0&features%5Bfeature.station_search_recommendation%5D=0&features%5Bfeature.darken_page%5D=1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>FlixBus boeking (5 volwassenen, 06/06/2026)</h3>
+            <p>shop.flixbus.be - vooraf ingevulde zoekopdracht</p>
+          </a>
+          <a
+            class="download-card"
+            href="https://www.flixbus.com/bus-routes/bus-krakow-airport-zakopane"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>FlixBus routepagina KRK Airport -> Zakopane</h3>
+            <p>Dienstinfo, frequentie en stopinformatie</p>
+          </a>
+          <a
+            class="download-card"
+            href="https://shop.flixbus.be/search?departureCity=40e27ae3-8646-11e6-9066-549f350fcb0c&arrivalCity=12fb32b4-db51-4e59-9cae-7dc9d629934b&route=Zakopane-Krak%C3%B3w+Airport&rideDate=11.06.2026&adult=5&_locale=nl_BE&departureCountryCode=PL&arrivalCountryCode=PL&features%5Bfeature.enable_distribusion%5D=1&features%5Bfeature.train_cities_only%5D=0&features%5Bfeature.station_search%5D=0&features%5Bfeature.station_search_recommendation%5D=0&features%5Bfeature.darken_page%5D=1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>FlixBus retourboeking (11/06/2026, 5 volwassenen)</h3>
+            <p>Zakopane -> Krakow Airport, vooraf ingevulde zoekopdracht</p>
+          </a>
+          <a
+            class="download-card"
+            href="https://www.flixbus.com/bus-routes/bus-zakopane-krakow-airport"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>FlixBus routepagina Zakopane -> KRK Airport</h3>
+            <p>Dienstinfo voor de terugreis op 11 juni</p>
+          </a>
+          <a
+            class="download-card"
+            href="https://www.flixbus.com/track"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>FlixBus live tracker</h3>
+            <p>Realtime busstatus op de dag zelf</p>
+          </a>
+          <a
+            class="download-card"
+            href="https://www.krakowairport.pl/en/passenger/transport-en/public-transport-en/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Krakow Airport openbaar vervoer</h3>
+            <p>Officiële luchthavenpagina voor back-up opties</p>
+          </a>
+        </div>
+
+        <h3>Links naar hutten en verblijf</h3>
+        <p>Directe links naar de plaatsen waar jullie overnachten tijdens de trip.</p>
+        <div class="download-grid">
+          <a class="download-card" href="https://schronisko-ornak.pl/" target="_blank" rel="noreferrer">
+            <h3>Schronisko PTTK na Hali Ornak</h3>
+            <p>schronisko-ornak.pl</p>
+          </a>
+          <a class="download-card" href="https://schroniskokondratowa.pl/" target="_blank" rel="noreferrer">
+            <h3>Schronisko PTTK Hala Kondratowa</h3>
+            <p>schroniskokondratowa.pl</p>
+          </a>
+          <a class="download-card" href="https://murowaniec.com/" target="_blank" rel="noreferrer">
+            <h3>Schronisko PTTK Murowaniec</h3>
+            <p>murowaniec.com</p>
+          </a>
+          <a class="download-card" href="https://piecstawow.pl/" target="_blank" rel="noreferrer">
+            <h3>Schronisko PTTK Dolina Pięciu Stawów</h3>
+            <p>piecstawow.pl</p>
+          </a>
+          <a class="download-card" href="https://www.willalabelle.pl/" target="_blank" rel="noreferrer">
+            <h3>Willa Labelle Zakopane</h3>
+            <p>willalabelle.pl</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>
+        Gemaakt voor Tatra, Kurwa! Laatste update: <span id="lastUpdated"></span>
+      </p>
+    </footer>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

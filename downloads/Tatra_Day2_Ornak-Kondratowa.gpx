@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="GitHub Copilot">
+  <metadata>
+    <name>Tatra Day 2 - Ornak to Kondratowa</name>
+    <desc>Day 2 per trip notes: GREEN from Ornak via Dolina Tomanowa/Chuda Przelaczka, ridge over Ciemniak-Krzesanica-Malolaczniak-Kopa Kondracka, then YELLOW/BLUE descent to Kondratowa.</desc>
+  </metadata>
+  <wpt lat="49.228942" lon="19.858810"><name>Hala Ornak Hut</name></wpt>
+  <wpt lat="49.228800" lon="19.874200"><name>Dolina Tomanowa section</name></wpt>
+  <wpt lat="49.229200" lon="19.892300"><name>Chuda Przelaczka area</name></wpt>
+  <wpt lat="49.231124" lon="19.903224"><name>Ciemniak</name></wpt>
+  <wpt lat="49.231544" lon="19.909528"><name>Krzesanica</name></wpt>
+  <wpt lat="49.235954" lon="19.919139"><name>Malolaczniak</name></wpt>
+  <wpt lat="49.242400" lon="19.933500"><name>Kopa Kondracka ridge area</name></wpt>
+  <wpt lat="49.240600" lon="19.937900"><name>Descent to Kondracka Przelecz</name></wpt>
+  <wpt lat="49.245800" lon="19.944300"><name>Blue trail section</name></wpt>
+  <wpt lat="49.248200" lon="19.948500"><name>Approach to Kondratowa hut</name></wpt>
+  <wpt lat="49.249647" lon="19.951727"><name>Hala Kondratowa Hut</name></wpt>
+  <rte>
+    <name>Day 2: Ornak -&gt; Czerwone Wierchy -&gt; Kondratowa</name>
+    <rtept lat="49.228942" lon="19.858810"><name>Hala Ornak</name></rtept>
+    <rtept lat="49.228800" lon="19.874200"><name>Dolina Tomanowa section</name></rtept>
+    <rtept lat="49.229200" lon="19.892300"><name>Chuda Przelaczka area</name></rtept>
+    <rtept lat="49.231124" lon="19.903224"><name>Ciemniak</name></rtept>
+    <rtept lat="49.231544" lon="19.909528"><name>Krzesanica</name></rtept>
+    <rtept lat="49.235954" lon="19.919139"><name>Malolaczniak</name></rtept>
+    <rtept lat="49.242400" lon="19.933500"><name>Kopa Kondracka ridge area</name></rtept>
+    <rtept lat="49.240600" lon="19.937900"><name>Kondracka Przelecz descent</name></rtept>
+    <rtept lat="49.245800" lon="19.944300"><name>Blue trail section</name></rtept>
+    <rtept lat="49.248200" lon="19.948500"><name>Approach to Kondratowa hut</name></rtept>
+    <rtept lat="49.249647" lon="19.951727"><name>Hala Kondratowa</name></rtept>
+  </rte>
+  <trk>
+    <name>Day 2 Track</name>
+    <trkseg><trkpt lat="49.2289420" lon="19.8588100" /><trkpt lat="49.2288000" lon="19.8742000" /><trkpt lat="49.2292000" lon="19.8923000" /><trkpt lat="49.2311240" lon="19.9032240" /><trkpt lat="49.2315440" lon="19.9095280" /><trkpt lat="49.2359540" lon="19.9191390" /><trkpt lat="49.2424000" lon="19.9335000" /><trkpt lat="49.2406000" lon="19.9379000" /><trkpt lat="49.2458000" lon="19.9443000" /><trkpt lat="49.2482000" lon="19.9485000" /><trkpt lat="49.2496470" lon="19.9517270" /></trkseg></trk>
+</gpx>

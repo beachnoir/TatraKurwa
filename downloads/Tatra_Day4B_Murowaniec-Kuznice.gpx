@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="GitHub Copilot">
+  <metadata>
+    <name>Tatra Day 4 Plan B - Murowaniec to Kuznice</name>
+    <desc>Day 4 Option B per trip notes: faster backup descent from Murowaniec to Kuznice, then transfer to Zakopane.</desc>
+  </metadata>
+  <wpt lat="49.243273" lon="20.006932"><name>Murowaniec Hut</name></wpt>
+  <wpt lat="49.246500" lon="19.996200"><name>Descent section</name></wpt>
+  <wpt lat="49.251600" lon="19.989700"><name>Descent section</name></wpt>
+  <wpt lat="49.259800" lon="19.985400"><name>Descent section</name></wpt>
+  <wpt lat="49.270251" lon="19.9808508"><name>Kuznice</name></wpt>
+  <rte>
+    <name>Day 4 Plan B: Murowaniec to Kuznice</name>
+    <rtept lat="49.243273" lon="20.006932"><name>Murowaniec</name></rtept>
+    <rtept lat="49.246500" lon="19.996200"><name>Descent section</name></rtept>
+    <rtept lat="49.251600" lon="19.989700"><name>Descent section</name></rtept>
+    <rtept lat="49.259800" lon="19.985400"><name>Descent section</name></rtept>
+    <rtept lat="49.270251" lon="19.9808508"><name>Kuznice</name></rtept>
+  </rte>
+  <trk>
+    <name>Day 4 Plan B Track</name>
+    <trkseg><trkpt lat="49.2432730" lon="20.0069320" /><trkpt lat="49.2465000" lon="19.9962000" /><trkpt lat="49.2516000" lon="19.9897000" /><trkpt lat="49.2598000" lon="19.9854000" /><trkpt lat="49.2702510" lon="19.9808508" /></trkseg></trk>
+</gpx>

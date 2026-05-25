@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="GitHub Copilot">
+  <metadata>
+    <name>Tatra Hut-to-Hut 2026 (Group Plan)</name>
+    <desc>Multi-day route aligned with the group day-by-day notes (including Day 4 Plan B exit).</desc>
+  </metadata>
+
+  <wpt lat="49.275474" lon="19.868932"><name>Kiry Trailhead</name></wpt>
+  <wpt lat="49.228942" lon="19.858810"><name>Hala Ornak Hut</name></wpt>
+  <wpt lat="49.228800" lon="19.874200"><name>Dolina Tomanowa section</name></wpt>
+  <wpt lat="49.229200" lon="19.892300"><name>Chuda Przelaczka area</name></wpt>
+  <wpt lat="49.231124" lon="19.903224"><name>Ciemniak</name></wpt>
+  <wpt lat="49.231544" lon="19.909528"><name>Krzesanica</name></wpt>
+  <wpt lat="49.235954" lon="19.919139"><name>Malolaczniak</name></wpt>
+  <wpt lat="49.234471" lon="19.938800"><name>Przelecz pod Kopa Kondracka</name></wpt>
+  <wpt lat="49.242400" lon="19.933500"><name>Kopa Kondracka ridge area</name></wpt>
+  <wpt lat="49.240600" lon="19.937900"><name>Kondracka Przelecz descent</name></wpt>
+  <wpt lat="49.245800" lon="19.944300"><name>Blue trail section</name></wpt>
+  <wpt lat="49.248200" lon="19.948500"><name>Approach to Kondratowa hut</name></wpt>
+  <wpt lat="49.249647" lon="19.951727"><name>Hala Kondratowa Hut</name></wpt>
+  <wpt lat="49.245100" lon="19.946200"><name>Green trail section</name></wpt>
+  <wpt lat="49.240300" lon="19.942300"><name>Green trail section</name></wpt>
+  <wpt lat="49.234800" lon="19.947800"><name>Red trail section</name></wpt>
+  <wpt lat="49.233700" lon="19.958900"><name>Red trail section</name></wpt>
+  <wpt lat="49.232800" lon="19.969500"><name>Red trail section</name></wpt>
+  <wpt lat="49.231801" lon="19.981561"><name>Kasprowy Wierch</name></wpt>
+  <wpt lat="49.236100" lon="19.988700"><name>Yellow trail section</name></wpt>
+  <wpt lat="49.240200" lon="19.995800"><name>Yellow trail section</name></wpt>
+  <wpt lat="49.243273" lon="20.006932"><name>Murowaniec Hut</name></wpt>
+  <wpt lat="49.232708" lon="20.014626"><name>Czarny Staw Gasienicowy</name></wpt>
+  <wpt lat="49.219088" lon="20.016392"><name>Zawrat Pass</name></wpt>
+  <wpt lat="49.213583" lon="20.048490"><name>Five Lakes Valley Hut</name></wpt>
+  <wpt lat="49.221800" lon="20.058200"><name>Descent section</name></wpt>
+  <wpt lat="49.229400" lon="20.073800"><name>Descent section</name></wpt>
+  <wpt lat="49.233972" lon="20.087790"><name>Wodogrzmoty Mickiewicza</name></wpt>
+  <wpt lat="49.2563575" lon="20.1034202"><name>Palenica Bialczanska</name></wpt>
+  <wpt lat="49.246500" lon="19.996200"><name>Plan B descent section</name></wpt>
+  <wpt lat="49.251600" lon="19.989700"><name>Plan B descent section</name></wpt>
+  <wpt lat="49.259800" lon="19.985400"><name>Plan B descent section</name></wpt>
+  <wpt lat="49.270251" lon="19.9808508"><name>Kuznice</name></wpt>
+
+  <rte>
+    <name>Day 1: Kiry to Hala Ornak</name>
+    <rtept lat="49.275474" lon="19.868932"><name>Kiry</name></rtept>
+    <rtept lat="49.228942" lon="19.858810"><name>Hala Ornak</name></rtept>
+  </rte>
+
+  <rte>
+    <name>Day 2: Ornak -&gt; Czerwone Wierchy -&gt; Kondratowa</name>
+    <rtept lat="49.228942" lon="19.858810"><name>Hala Ornak</name></rtept>
+    <rtept lat="49.228800" lon="19.874200"><name>Dolina Tomanowa section</name></rtept>
+    <rtept lat="49.229200" lon="19.892300"><name>Chuda Przelaczka area</name></rtept>
+    <rtept lat="49.231124" lon="19.903224"><name>Ciemniak</name></rtept>
+    <rtept lat="49.231544" lon="19.909528"><name>Krzesanica</name></rtept>
+    <rtept lat="49.235954" lon="19.919139"><name>Malolaczniak</name></rtept>
+    <rtept lat="49.242400" lon="19.933500"><name>Kopa Kondracka ridge area</name></rtept>
+    <rtept lat="49.240600" lon="19.937900"><name>Kondracka Przelecz descent</name></rtept>
+    <rtept lat="49.245800" lon="19.944300"><name>Blue trail section</name></rtept>
+    <rtept lat="49.248200" lon="19.948500"><name>Approach to Kondratowa hut</name></rtept>
+    <rtept lat="49.249647" lon="19.951727"><name>Hala Kondratowa</name></rtept>
+  </rte>
+
+  <rte>
+    <name>Day 3: Kondratowa -&gt; Kasprowy -&gt; Murowaniec</name>
+    <rtept lat="49.249647" lon="19.951727"><name>Hala Kondratowa</name></rtept>
+    <rtept lat="49.245100" lon="19.946200"><name>Green trail section</name></rtept>
+    <rtept lat="49.240300" lon="19.942300"><name>Green trail section</name></rtept>
+    <rtept lat="49.234471" lon="19.938800"><name>Przelecz pod Kopa Kondracka</name></rtept>
+    <rtept lat="49.234800" lon="19.947800"><name>Red trail section</name></rtept>
+    <rtept lat="49.233700" lon="19.958900"><name>Red trail section</name></rtept>
+    <rtept lat="49.232800" lon="19.969500"><name>Red trail section</name></rtept>
+    <rtept lat="49.231801" lon="19.981561"><name>Kasprowy Wierch</name></rtept>
+    <rtept lat="49.236100" lon="19.988700"><name>Yellow trail section</name></rtept>
+    <rtept lat="49.240200" lon="19.995800"><name>Yellow trail section</name></rtept>
+    <rtept lat="49.243273" lon="20.006932"><name>Murowaniec</name></rtept>
+  </rte>
+
+  <rte>
+    <name>Day 4 Option A: Murowaniec -&gt; Zawrat -&gt; Palenica</name>
+    <rtept lat="49.243273" lon="20.006932"><name>Murowaniec</name></rtept>
+    <rtept lat="49.232708" lon="20.014626"><name>Czarny Staw Gasienicowy</name></rtept>
+    <rtept lat="49.219088" lon="20.016392"><name>Zawrat</name></rtept>
+    <rtept lat="49.213583" lon="20.048490"><name>Five Lakes Valley Hut</name></rtept>
+    <rtept lat="49.221800" lon="20.058200"><name>Descent section</name></rtept>
+    <rtept lat="49.229400" lon="20.073800"><name>Descent section</name></rtept>
+    <rtept lat="49.233972" lon="20.087790"><name>Wodogrzmoty Mickiewicza</name></rtept>
+    <rtept lat="49.2563575" lon="20.1034202"><name>Palenica Bialczanska</name></rtept>
+  </rte>
+
+  <rte>
+    <name>Day 4 Option B: Murowaniec -&gt; Kuznice</name>
+    <rtept lat="49.243273" lon="20.006932"><name>Murowaniec</name></rtept>
+    <rtept lat="49.246500" lon="19.996200"><name>Descent section</name></rtept>
+    <rtept lat="49.251600" lon="19.989700"><name>Descent section</name></rtept>
+    <rtept lat="49.259800" lon="19.985400"><name>Descent section</name></rtept>
+    <rtept lat="49.270251" lon="19.9808508"><name>Kuznice</name></rtept>
+  </rte>
+
+  <trk>
+    <name>Tatra Hut-to-Hut 2026 Full Plan</name>
+    <trkseg><trkpt lat="49.2754740" lon="19.8689320" /><trkpt lat="49.2289420" lon="19.8588100" /><trkpt lat="49.2288000" lon="19.8742000" /><trkpt lat="49.2292000" lon="19.8923000" /><trkpt lat="49.2311240" lon="19.9032240" /><trkpt lat="49.2315440" lon="19.9095280" /><trkpt lat="49.2359540" lon="19.9191390" /><trkpt lat="49.2424000" lon="19.9335000" /><trkpt lat="49.2406000" lon="19.9379000" /><trkpt lat="49.2458000" lon="19.9443000" /><trkpt lat="49.2482000" lon="19.9485000" /><trkpt lat="49.2496470" lon="19.9517270" /><trkpt lat="49.2451000" lon="19.9462000" /><trkpt lat="49.2403000" lon="19.9423000" /><trkpt lat="49.2344710" lon="19.9388000" /><trkpt lat="49.2348000" lon="19.9478000" /><trkpt lat="49.2337000" lon="19.9589000" /><trkpt lat="49.2328000" lon="19.9695000" /><trkpt lat="49.2318010" lon="19.9815610" /><trkpt lat="49.2361000" lon="19.9887000" /><trkpt lat="49.2402000" lon="19.9958000" /><trkpt lat="49.2432730" lon="20.0069320" /><trkpt lat="49.2327080" lon="20.0146260" /><trkpt lat="49.2190880" lon="20.0163920" /><trkpt lat="49.2135830" lon="20.0484900" /><trkpt lat="49.2218000" lon="20.0582000" /><trkpt lat="49.2294000" lon="20.0738000" /><trkpt lat="49.2339720" lon="20.0877900" /><trkpt lat="49.2563575" lon="20.1034202" /></trkseg></trk>
+</gpx>
